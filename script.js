@@ -1,11 +1,15 @@
-function calcPct(){
-let p=+document.getElementById('part').value;
-let w=+document.getElementById('whole').value;
-document.getElementById('pct').innerText=((p/w)*100).toFixed(2)+'%';
+function toggleDark(){document.body.classList.toggle('dark');}
+function emi(){
+let p=+loan.value,r=(+rate.value/12/100),n=(+years.value*12);
+let e=(p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+emiResult.innerText='Monthly EMI: '+e.toFixed(2);
 }
-function calcBMI(){
-let kg=+document.getElementById('kg').value;
-let cm=+document.getElementById('cm').value;
-let bmi=kg/((cm/100)**2);
-document.getElementById('bmi').innerText='BMI: '+bmi.toFixed(1);
+function bmi(){
+let b=kg.value/((cm.value/100)**2);
+bmiResult.innerText='BMI: '+b.toFixed(1);
+}
+function ageCalc(){
+let d=new Date(dob.value);
+let age=new Date().getFullYear()-d.getFullYear();
+ageResult.innerText='Age: '+age+' years';
 }

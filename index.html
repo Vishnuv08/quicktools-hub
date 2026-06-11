@@ -1,31 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>QuickTools Hub</title>
+<title>CalcNova</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>QuickTools Hub</h1>
-<p>Free calculators people search for every day.</p>
+<header>
+<h1>CalcNova</h1>
+<select id="lang">
+<option>English</option>
+<option>Hindi</option>
+<option>Spanish</option>
+<option>Dutch</option>
+<option>French</option>
+<option>German</option>
+<option>Portuguese</option>
+<option>Arabic</option>
+<option>Chinese</option>
+<option>Japanese</option>
+<option>Korean</option>
+</select>
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+</header>
+
+<h2>Popular Calculators</h2>
 
 <div class="card">
-<h2>Percentage Calculator</h2>
-<input id="part" type="number" placeholder="Part">
-<input id="whole" type="number" placeholder="Whole">
-<button onclick="calcPct()">Calculate</button>
-<p id="pct"></p>
+<h3>EMI Calculator</h3>
+<input id="loan" type="number" placeholder="Loan Amount">
+<input id="rate" type="number" placeholder="Annual Interest %">
+<input id="years" type="number" placeholder="Years">
+<button onclick="emi()">Calculate</button>
+<p id="emiResult"></p>
 </div>
 
 <div class="card">
-<h2>BMI Calculator</h2>
-<input id="kg" type="number" placeholder="Weight (kg)">
-<input id="cm" type="number" placeholder="Height (cm)">
-<button onclick="calcBMI()">Calculate</button>
-<p id="bmi"></p>
+<h3>BMI Calculator</h3>
+<input id="kg" type="number" placeholder="Weight kg">
+<input id="cm" type="number" placeholder="Height cm">
+<button onclick="bmi()">Calculate</button>
+<p id="bmiResult"></p>
 </div>
 
+<div class="card">
+<h3>Age Calculator</h3>
+<input id="dob" type="date">
+<button onclick="ageCalc()">Calculate</button>
+<p id="ageResult"></p>
+</div>
+
+<footer>
+<p>CalcNova © 2025</p>
+<p>Ad Space</p>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
